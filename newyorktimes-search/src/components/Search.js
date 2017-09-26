@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Results from "./Results"
+import Results from "./Results.js"
 import axios from "axios";
 
 class Search extends Component {
@@ -122,7 +122,7 @@ class Search extends Component {
           </div>
         </div>
 
-        <Results />
+        <Results found={this.state.searchedArticles}/>
       </div>
     );
   }
