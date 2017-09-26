@@ -19,6 +19,11 @@ class Results extends Component {
       .catch(err => console.log(err));
   };
 
+  deleteArticle = id => {
+    API.deleteArticle(id)
+      .then(res => this.loadArticles())
+      .catch(err => console.log(err));
+  };
 
   render() {
     return (
@@ -27,14 +32,15 @@ class Results extends Component {
           <h1 className="panel-title"> Saved </h1>
         </div>
 
-        {console.log(this.state.articles.length)}
+        {console.log(`Number of saved articles: ${this.state.articles.length}`)}
         {this.state.articles.length ? (
           <ul>
             {this.state.articles.map(article => (
               <li key={article._id}> 
                 <p> {article.title} </p>
                 <p> {article.url} </p>
-                <p> {article.date} </p> 
+                <p> {article.date} </p>
+                <button onClick={() => this.deleteArticle(article._id)}>Delete</button> 
               </li>
             ))}
           </ul>

@@ -23,17 +23,17 @@ mongoose.connect(
   }
 );
 
+// Test article
+const Article = require("./models/Article.js");
+var newArticle = new Article({
+	title: "title",
+	url: "link"
+});
 
-// const Article = require("./models/Article.js");
-// var newArticle = new Article({
-// 	title: "title",
-// 	url: "link"
-// });
+// Saves new article to database if unique
+newArticle.save(function(err,doc){
 
-// // Saves new article to database if unique
-// newArticle.save(function(err,doc){
-
-// });
+});
 
 // Start the API server
 app.listen(PORT, function() {
