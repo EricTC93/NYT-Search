@@ -2,7 +2,9 @@
   "name": "newyorktimes-search",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
+    "axios": "^0.16.2",
     "mongoose": "^4.11.13",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

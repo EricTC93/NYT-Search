@@ -11,17 +11,17 @@ const Search = () =>
       <div className="panel-body">
         <form>
           <div className="form-group">
-            <label for="topic">Topic</label>
+            <label htmlFor="topic">Topic</label>
             <input className="form-control" name="topic" type="text"/>
           </div>
 
           <div className="form-group">
-            <label for="startYear">Start Year</label>
+            <label htmlFor="startYear">Start Year</label>
             <input className="form-control" name="startYear" type="text"/>
           </div>
 
           <div className="form-group">
-            <label for="endYear">End Year</label>
+            <label htmlFor="endYear">End Year</label>
             <input className="form-control" name="endYear" type="text"/>
           </div>
 
