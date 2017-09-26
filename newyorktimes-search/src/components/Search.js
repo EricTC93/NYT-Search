@@ -52,7 +52,8 @@ class Search extends Component {
       for (let i = 0; i < limitResults && i < res.length; i++) {
         found.push({
           title: res[i].headline.main,
-          url: res[i].web_url
+          url: res[i].web_url,
+          id: res[i]._id
         });
       }
       console.log(found);

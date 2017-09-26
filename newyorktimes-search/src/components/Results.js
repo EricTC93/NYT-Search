@@ -20,7 +20,7 @@ class Results extends Component {
         {this.props.found.length ? (
             <ul>
               {this.props.found.map(article => (
-                <li> 
+                <li key={article.id}> 
                   <p> {article.title} </p>
                   <p> {article.url} </p>
                   <button onClick={() => this.saveArticle({title:article.title, url:article.url})}>Save</button> 
